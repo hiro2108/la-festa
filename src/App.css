@@ -1,3 +1,8 @@
+:root {
+  color-scheme: light dark;
+  --themeColor: #b4093f;
+}
+
 html {
   scroll-behavior: smooth;
 
@@ -61,7 +66,7 @@ h2 {
 
   margin-left: .5rem;
   border-bottom: 3px solid;
-  border-image: linear-gradient(to right, #85002B, #7fff7f) 1;
+  border-image: linear-gradient(to right, var(--themeColor), #7fff7f) 1;
   margin-right: calc(50% - 50vw);
 }
 
@@ -70,7 +75,7 @@ h2 span {
 }
 
 .h2-green {
-  border-image: linear-gradient(to right, #7fff7f, #85002B) 1;
+  border-image: linear-gradient(to right, #7fff7f, var(--themeColor)) 1;
 }
 
 h3 {
@@ -82,7 +87,7 @@ h3::before {
   position: absolute;
   left: .5rem;
   content: "";
-  background-color: #85002B;
+  background-color: var(--themeColor);
   width: .5rem;
   height: 100%;
 }
@@ -112,12 +117,8 @@ hr {
   margin: 0 1rem;
 }
 
-a {
-  color: #85002B;
-}
-
 a:hover {
-  color: #85002B;
+  color: var(--themeColor);
   opacity: .7;
 }
 
@@ -156,11 +157,10 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-
   padding: .5rem;
   font-size: 1.4rem;
   border-radius: 0;
-  background-color: #85002B;
+  background-color: var(--themeColor);
   color: #fff;
 }
 
@@ -171,7 +171,7 @@ button {
 }
 
 .menu a {
-  color: #85002B;
+  color: var(--themeColor);
   text-decoration: none;
   font-size: 1.4rem;
 
@@ -416,12 +416,12 @@ button {
   display: flex;
   justify-content: center;
   padding: .5rem auto;
-  border: #85002B solid 2px;
+  border: var(--themeColor) solid 2px;
   width: calc(100% / 3);
 }
 
 .overview-buttons button.isActive {
-  background-color: #85002B;
+  background-color: var(--themeColor);
   color: #fff;
 
 }
@@ -450,7 +450,7 @@ button {
 }
 
 .overview-toForm {
-  color: #85002B;
+  color: var(--themeColor);
   text-decoration: underline;
 }
 
@@ -592,10 +592,14 @@ form {
   width: 100%;
   max-width: 900px;
 }
-.category,.store,.content{
+
+.category,
+.store,
+.content {
   background-color: #fff;
   color: #000;
 }
+
 textarea {
   width: 100%;
 }
@@ -604,7 +608,7 @@ button[type="submit"] {
   display: flex;
   justify-content: center;
   color: #fff;
-  background-color: #85002B;
+  background-color: var(--themeColor);
   padding: .5rem;
   width: 30%;
 
@@ -661,6 +665,7 @@ button[type="submit"] {
   display: flex;
   justify-content: center;
   align-items: center;
+  color: var(--themeColor);
 }
 
 .link img {
@@ -708,7 +713,8 @@ button[type="submit"] {
   margin-right: calc(50% - 50vw);
   margin-left: calc(50% - 50vw);
 }
-.map-shopName{
+
+.map-shopName {
   color: #000;
 }
 
@@ -746,7 +752,7 @@ button[type="submit"] {
 /* footer */
 footer {
 
-  background-color: #85002B;
+  background-color: var(--themeColor);
 }
 
 .footer-inner {
@@ -796,14 +802,5 @@ footer {
     justify-content: space-between;
     flex-direction: row;
     align-items: center;
-  }
-}
-
-/* dark mode */
-@media (prefers-color-scheme: dark) {
-
-  .link,
-  .menuButton img {
-    filter: brightness(1.5);
   }
 }

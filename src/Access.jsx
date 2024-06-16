@@ -1,9 +1,9 @@
-import { APIProvider, Map, AdvancedMarker, Pin, InfoWindow } from '@vis.gl/react-google-maps';
+import { APIProvider, Map, AdvancedMarker, useGoogleMapsContext , InfoWindow } from '@vis.gl/react-google-maps';
 import { useMediaQuery } from 'react-responsive';
 
 const Access = (props) => {
+    const {apiKey} = useGoogleMapsContext();
     const isDesktop = useMediaQuery({ query: '(min-width: 767px)' });
-    const apiKey = import.meta.env.VITE_API_KEY;
     const position = props.shopOverview[props.selectedShop].CENTER;
     const zoom = props.shopOverview[props.selectedShop].ZOOM;
     const desktopMapPostion = { lat: 35.7142509, lng: 139.7611782 }

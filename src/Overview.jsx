@@ -1,6 +1,6 @@
 import { useState } from 'react'
 // import Map from './Map'
-import Access from './Access'
+// import Access from './Access'
 
 const shopOverview = {
     'shinjuku': {
@@ -10,11 +10,7 @@ const shopOverview = {
         inquiry: '000-0000-000',
         access: '東京都新宿区○○○○',
         link: 'https://maps.app.goo.gl/4fPZGNwibgr3khuw7',
-        CENTER: {
-            lat: 35.6924892,
-            lng: 139.6987123,
-        },
-        ZOOM: 16,
+        masp: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.3709088331075!2d139.6972768763434!3d35.69248917935455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188cd0d6b1ba1f%3A0x1c32a1f1ecacfdd5!2sShinjuku%20Station!5e0!3m2!1sen!2sjp!4v1718569077244!5m2!1sen!2sjp'
     },
     'ikebukuro': {
         name: 'イタリアンレストラン La Festa 池袋店',
@@ -23,11 +19,7 @@ const shopOverview = {
         inquiry: '111-1111-1111',
         access: '東京都豊島区○○○○',
         link: 'https://maps.app.goo.gl/773jf7TkNVwcduk99',
-        CENTER: {
-            lat: 35.7295071,
-            lng: 139.7083252,
-        },
-        ZOOM: 16,
+        maps: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3238.8662795352966!2d139.70602918880036!3d35.729507056610394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d5d4043e0dd%3A0x213775d25d2b034d!2sIkebukuro%20Station!5e0!3m2!1sen!2sjp!4v1718569622359!5m2!1sen!2sjp'
     },
     'kinshicho': {
         name: 'イタリアンレストラン La Festa 錦糸町店',
@@ -36,11 +28,7 @@ const shopOverview = {
         inquiry: '222-2222-2222',
         access: '東京都墨田区○○○○',
         link: 'https://maps.app.goo.gl/d3PiNts1DEH3gDKDA',
-        CENTER: {
-            lat: 35.6966451,
-            lng: 139.8119958,
-        },
-        ZOOM: 16,
+        maps: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.196438085458!2d139.8113968763434!3d35.696783329118645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601888d7fcfd5afd%3A0x9bdc97f138559578!2sKinshich%C5%8D%20Station!5e0!3m2!1sen!2sjp!4v1718569672504!5m2!1sen!2sjp'
     }
 }
 
@@ -143,7 +131,7 @@ const Overview = (props) => {
                     </td>
                 </tr>
             </table>
-            <Access selectedShop={selectedShop} shopOverview={shopOverview} />
+            <iframe src="https://www.google.com/maps/d/u/1/embed?mid=1J57PC65NqPFEtOWNRUX847s-zkiNAQY&ehbc=2E312F&noprof=1" width="100%" height="400"></iframe>
         </div >
     )
 }

@@ -16,7 +16,7 @@ const ToggleButton = () => {
             color: 'black',
         };
         const darkTheme = {
-            backgroundColor: '#333',
+            backgroundColor: '#000000',
             color: 'white',
         };
         body.style.backgroundColor = isDarkMode ? darkTheme.backgroundColor : lightTheme.backgroundColor;
